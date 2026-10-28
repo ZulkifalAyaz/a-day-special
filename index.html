@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Happy Birthday!</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;1,9..144,500&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="confetti" aria-hidden="true"></canvas>
+<div class="balloons" id="balloons" aria-hidden="true"></div>
+
+<main>
+  <section class="hero">
+    <h1 id="title">Happy Birthday, <span id="name">Friend</span>!</h1>
+    <p class="sub" id="sub">Make a wish, then blow out the candles.</p>
+
+    <svg class="cake" viewBox="0 0 300 260" role="img" aria-label="Birthday cake with three candles">
+      <ellipse cx="150" cy="240" rx="130" ry="12" fill="#000" opacity=".25"/>
+      <rect x="40" y="170" width="220" height="66" rx="12" fill="#f4a5b8"/>
+      <path d="M40 186q18 16 36 0t36 0 36 0 36 0 36 0 40 0v-4a12 12 0 0 0-12-12H52a12 12 0 0 0-12 12z" fill="#fff4e6"/>
+      <rect x="70" y="112" width="160" height="62" rx="12" fill="#ffcf70"/>
+      <path d="M70 128q16 14 32 0t32 0 32 0 32 0 32 0v-4a12 12 0 0 0-12-12H82a12 12 0 0 0-12 12z" fill="#fff4e6"/>
+      <g id="candles">
+        <g class="candle" transform="translate(112 0)"><rect x="-5" y="68" width="10" height="44" rx="3" fill="#8fd9c8"/><path class="flame" d="M0 40c-9 11-9 22 0 24 9-2 9-13 0-24z" fill="#ffb02e"/><path class="flame core" d="M0 50c-4 6-4 11 0 12 4-1 4-6 0-12z" fill="#fff3b0"/></g>
+        <g class="candle" transform="translate(150 0)"><rect x="-5" y="60" width="10" height="52" rx="3" fill="#f4a5b8"/><path class="flame" d="M0 32c-9 11-9 22 0 24 9-2 9-13 0-24z" fill="#ffb02e"/><path class="flame core" d="M0 42c-4 6-4 11 0 12 4-1 4-6 0-12z" fill="#fff3b0"/></g>
+        <g class="candle" transform="translate(188 0)"><rect x="-5" y="68" width="10" height="44" rx="3" fill="#b9a6ff"/><path class="flame" d="M0 40c-9 11-9 22 0 24 9-2 9-13 0-24z" fill="#ffb02e"/><path class="flame core" d="M0 50c-4 6-4 11 0 12 4-1 4-6 0-12z" fill="#fff3b0"/></g>
+      </g>
+    </svg>
+
+    <button id="blow" type="button">Blow out the candles</button>
+  </section>
+
+  <section class="wishes" id="wishes" hidden>
+    <h2>A few things I wish for you</h2>
+    <ol id="wishList"></ol>
+    <p class="sign" id="sign"></p>
+    <button id="again" type="button">Light them again</button>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
